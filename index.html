@@ -25,23 +25,36 @@
         h1 {
             font-family: var(--ff-primary);
         }
+
+        .btn-primary {
+            background-image: linear-gradient(to right, rgb(50, 190, 143), rgb(56, 211, 159), rgb(50, 190, 143));
+            border: 1px solid var(--color-gray-60);
+        }
     </style>
 </head>
 
 <body>
     <main>
         <section>
-            <div class="d-sm-flex flex-sm-column justify-">
-                <div>avatar</div>
-                <div>
-                    <h1>WELCOME</h1>
+            <div class="d-lg-flex flex-lg-row">
+                <img src="images/wave.png" alt="" width="400">
+                <div class="d-none d-sm-none d-md-none d-lg-block">
+                    <img src="images/bg.svg" alt="" width="400">
                 </div>
-                <div>Username</div>
-                <div>Password</div>
-                <div>Forget Password?</div>
-                <div>login</div>
+                <div class="d-sm-flex flex-sm-column d-lg-flex flex-lg-row justify-content-center align-items-center">
+                    <div>
+                        <img src="images/avatar.svg" alt="avatar" class="rounded-circle" width="100"></div>
+                    <div>
+                        <h1>WELCOME</h1>
+                    </div>
+                    <div style="color: var(--color-gray-60);">Username</div>
+                    <div style="color: var(--color-gray-60);">Password</div>
+                    <div>Forget Password?</div>
+                    <div class="d-grid">
+                        <button class="btn btn-primary">login</button>
+                    </div>
+                </div>
             </div>
-            background-image: linear-gradient(to right, rgb(50, 190, 143), rgb(56, 211, 159), rgb(50, 190, 143));
         </section>
     </main>
 </body>
