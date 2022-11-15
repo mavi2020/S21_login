@@ -1,62 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Session21_Login</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.min.css"
+      integrity="sha512-+oRH6u1nDGSm3hH8poU85YFIVTdSnS2f+texdPGrURaJh8hzmhMiZrQth6l56P4ZQmxeZzd2DqVEMqQoJ8J89A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <style>
-        :root {
-            --ff-primary: poppins;
-            --ff-secondary: ;
-            --color-gray-90: #333;
-            --color-gray-80: #555;
-            --color-gray-70: #757575;
-            --color-gray-60: #999;
-            --color-gray-40: #d9d9d9;
-            --color-gray-20: #f0f0f0;
-        }
+      :root {
+        --ff-primary: poppins;
+        --ff-secondary: ;
+        --primary-color: #38d39f;
+        --color-gray-90: #333;
+        --color-gray-80: #555;
+        --color-gray-70: #757575;
+        --color-gray-60: #999;
+        --color-gray-40: #d9d9d9;
+        --color-gray-20: #f0f0f0;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
 
-        h1 {
-            font-family: var(--ff-primary);
-        }
+      h1,
+      h2,h3 {
+        font-family: var(--ff-primary);
+      }
+      h1 {
+        font-size: 3.5rem;
+        font-style: normal;
+      }
+      h2 {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      h3{
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      .data-color{
+        color: var(--color-gray-60);
+      }
+      #data-box {
+        display: flex;
+        align-items: flex-end;
+      }
+      #data-box:hover {
+        align-items: flex-start;
+        transition: all 500ms;
+      }
+      .btn-primary {
+        background-image: linear-gradient(to right, rgb(50, 190, 143), rgb(56, 211, 159), rgb(50, 190, 143));
+        border: 1px solid var(--color-gray-60);
+      }
+      /* // Small devices (landscape phones, 576px and up) */
+      @media (min-width: 576px) {
+      }
 
-        .btn-primary {
-            background-image: linear-gradient(to right, rgb(50, 190, 143), rgb(56, 211, 159), rgb(50, 190, 143));
-            border: 1px solid var(--color-gray-60);
+      /* // Medium devices (tablets, 768px and up) */
+      @media (min-width: 768px) {
+      }
+
+      /* // Large devices (desktops, 992px and up) */
+      @media (min-width: 992px) {
+        .wave {
+          background-image: url(images/wave.png);
+          background-position: left bottom;
+          background-repeat: no-repeat;
+          background-size: contain;
         }
+      }
+
+      /* // X-Large devices (large desktops, 1200px and up) */
+      @media (min-width: 1200px) {
+      }
+
+      /* // XX-Large devices (larger desktops, 1400px and up) */
+      @media (min-width: 1400px) {
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <main>
-        <section>
-            <div class="d-lg-flex flex-lg-row">
-                <img src="images/wave.png" alt="" width="400">
-                <div class="d-none d-sm-none d-md-none d-lg-block">
-                    <img src="images/bg.svg" alt="" width="400">
-                </div>
-                <div class="d-sm-flex flex-sm-column d-lg-flex flex-lg-row justify-content-center align-items-center">
-                    <div>
-                        <img src="images/avatar.svg" alt="avatar" class="rounded-circle" width="100"></div>
-                    <div>
-                        <h1>WELCOME</h1>
-                    </div>
-                    <div style="color: var(--color-gray-60);">Username</div>
-                    <div style="color: var(--color-gray-60);">Password</div>
-                    <div>Forget Password?</div>
-                    <div class="d-grid">
-                        <button class="btn btn-primary">login</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <body class="d-flex">
+    <main class="container-fluid wave">
+      <section class="d-lg-flex flex-lg-row">
+        <div class="d-none d-sm-none d-md-none d-lg-block">
+          <img src="images/bg.svg" alt="" class="img-fluid" />
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center" style="width: 50%; height: 100vh">
+          <img src="images/avatar.svg" alt="avatar" class="rounded-circle mb-4" width="200" />
+          <h1 class="mb-4">WELCOME</h1>
+          <div id="data-box" class="d-flex border-bottom mb-4 w-50 data-color" style="height: 50px">
+            <div class="d-flex align-items-center py-2 pe-3"><i class="fa-solid fa-user"></i></div>
+            <h2>Username</h2>
+          </div>
+          <div class="d-flex border-bottom mb-2 w-50 data-color" style="">
+            <div class="pe-3"><i class="fa-solid fa-lock"></i></div>
+            <h2>Password</h2>
+          </div>
+          <div class="mb-4 w-50 data-color" style="text-align: right">
+            <h3>Forget Password?</h3> </div>
+          <button class="btn btn-primary w-50">login</button>
+        </div>
+      </section>
     </main>
-</body>
-
+  </body>
 </html>
